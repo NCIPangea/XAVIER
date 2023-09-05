@@ -16,7 +16,7 @@ env:
 jobs:
   sync:
     # only run this action from the forked repo
-    if: ${{ github.repository_owner == $FORK_OWNER }}
+    if: ${{ github.repository_owner == env.FORK_OWNER }}
     runs-on: ubuntu-latest
     steps:
       - name: get repo name
